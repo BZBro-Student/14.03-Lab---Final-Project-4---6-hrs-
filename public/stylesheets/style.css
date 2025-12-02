@@ -1,8 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
-
-a {
-  color: #00B7FF;
+/* HOME */
+.pagehead {
+  background-color: #10291D;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #F7C64A;
 }
+h1{
+  font-size: 40pt;
+  color: black;
+  font-family: 'Italianno';
+}
+.linksection {
+  justify-content: center;
+  background-color: #10291D;
+  display: flex;
+  gap: 1%;
+  border: 3px solid #F7C64A;
+}
+.linksection a {
+  color:#F7F7F7;
+}
+.linksection a, .textsection, .menu {
+  font-family: 'Montserrat';
+}
+.homepagecontent {
+  display: flex;
+  justify-content: flex-start;
+  border: solid 3px #F7C64A;
+}
+.hometext {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.textsection {
+  border: solid 1px gray;
+}
+.homeimage {
+  background-color: #10291D;
+  display: flex; 
+  flex-direction: column;
+  padding-top: 5%;
+  border: solid 3px #F7C64A;
+}
+/* MENU */
+.itemimg {
+  height: auto; 
+  max-width: 200px;  
+  max-height: 100px;
+  object-fit: contain;
+}
+.itemdetails {
+  display: flex;
+  flex-direction: row;
+  gap: 5%;
+  border: solid 1px gray;
+}
+.menu {
+  background-color: #F7F7F7;
+  display: flex;
+  flex-direction: column;
+  border: solid 3px #F7C64A;
+}
+/*About Us*/
+.aboutimg {
+  max-width: 100%; 
+  height: auto;
+}
+.aboutustextcontent {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  background-color: #10291D;
+  gap: 20px;
+  border: solid 3px #F7C64A;
+}
+.aboutustext {
+  background-color: #F7F7F7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 0 1 25%;
+}
+.abouttimeline {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  background-color: #10291D;
+}
+.abouttimeline h2 {
+  color:#F7F7F7;
+  font-family: 'Montserrat';
+}
+/*Comments*/

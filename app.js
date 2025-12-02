@@ -1,9 +1,14 @@
 const express = require('express');
 const path = require('path');
+const createError = require('http-errors');
 const { dbMiddleware} = require('./bin/db');
 
 
 const indexRouter = require('./routes/index');
+const menuRouter = require('./routes/menu');
+const aboutRouter = require('./routes/about');
+const commentsRouter= require('./routes/comments');
+
 //add more handlers here
 
 const app = express();
@@ -11,14 +16,17 @@ const app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
-
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(dbMiddleware);
 app.use('/', indexRouter);
 //add more routes here
+app.use(dbMiddleware);
+app.use('/', indexRouter);
+app.use('/menu', menuRouter);
+app.use('/about', aboutRouter);
+app.use('/comments', commentsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

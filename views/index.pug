@@ -1,23 +1,36 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
-  ol
-  each val in todos
-    li
-      span= val.task + ' - '
-      if val.completed > 0
-        span Completed
-      else
-        pan Not Completed
-      form(method='POST' action='/delete')
-        input(type='hidden', name='id', value=val.id)
-        button(type='submit') Delete
+  div(class='homepagecontent')
+    div(class='hometext')
+      h1 Downtown Donuts
+      div(class='textsection')
+        p Lorem ipsum dolor sit amet consectetur adipiscing elit. 
+          Quisque faucibus ex sapien vitae pellentesque sem placerat. 
+          In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. 
+          Ut hendrerit semper vel class aptent taciti sociosqu. 
+          Ad litora torquent per conubia nostra inceptos himenaeos.
+      div(class='textsection')
+        p Lorem ipsum dolor sit amet consectetur adipiscing elit. 
+          Quisque faucibus ex sapien vitae pellentesque sem placerat. 
+          In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. 
+          Ut hendrerit semper vel class aptent taciti sociosqu. 
+          Ad litora torquent per conubia nostra inceptos himenaeos.
+      div(class='textsection')
+        p Lorem ipsum dolor sit amet consectetur adipiscing elit. 
+          Quisque faucibus ex sapien vitae pellentesque sem placerat. 
+          In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. 
+          Ut hendrerit semper vel class aptent taciti sociosqu. 
+          Ad litora torquent per conubia nostra inceptos himenaeos.
+      div(class='textsection')
+        p Lorem ipsum dolor sit amet consectetur adipiscing elit. 
+          Quisque faucibus ex sapien vitae pellentesque sem placerat. 
+          In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. 
+          Ut hendrerit semper vel class aptent taciti sociosqu. 
+          Ad litora torquent per conubia nostra inceptos himenaeos.
+    div(class='homeimage')
+      img(src='/images/placeholderpug.jpg')
 
-  hr
-  h2 Add a new task
-  form(method='POST' action='/create')
-    label(for='task') Task:
-    input(type='text', name='task', id='task', required)
-    button(type='submit') Create Task
+
+
+
