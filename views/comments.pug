@@ -1,22 +1,18 @@
 extends layout 
 
 block content
-  h1= title
-  ol
-  each val in todos
-    li
-      span= val.task + ' - '
-      if val.completed > 0
-        span Completed
-      else
-        pan Not Completed
-      form(method='POST' action='/delete')
-        input(type='hidden', name='id', value=val.id)
-        button(type='submit') Delete
+  div(class='reviewcontainer')
+    h1= title + ' Reviews'
+    ol
+    each val in todos
+      li(class='comment')
+        span= val.task
+        form(method='POST' action='/comments/delete')
+          input(type='hidden', name='id', value=val.id)
+          button(type='submit') Delete
 
-  hr
-  h2 Add a new task
-  form(method='POST' action='/create')
-    label(for='task') Task:
-    input(type='text', name='task', id='task', required)
-    button(type='submit') Create Task
+    div
+      form(method='POST' action='/comments/create')
+        div(class = 'commentfield')
+          textarea(name='task', id='task', rows='10',cols='100', required)
+          button(type='submit') Comment

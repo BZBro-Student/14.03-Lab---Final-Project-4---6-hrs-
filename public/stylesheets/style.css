@@ -103,3 +103,29 @@ h1{
   font-family: 'Montserrat';
 }
 /*Comments*/
+.commentfield {
+  background-color: #10291D;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+.reviewcontainer {
+  text-align: center;
+  align-items: center; 
+  display: flex;
+  flex-direction: column;
+  background-color: #10291D;
+}
+.reviewcontainer h1 {
+  color: #F7F7F7;
+}
+.comment{
+  background-color: #10291D;
+  color:#F7F7F7;
+  display: flex;
+  flex-direction: column;
+}
+li{
+  width: 50%;
+  border: solid 3px #F7C64A;
+}

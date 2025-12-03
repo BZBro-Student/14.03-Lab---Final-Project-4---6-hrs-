@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 /* GET home page. */
-router.get('/comments', function(req, res, next){
+router.get('/', function(req, res, next){
   try {
     req.db.query('SELECT * FROM todos;', (err, results) => {
       if (err) {
